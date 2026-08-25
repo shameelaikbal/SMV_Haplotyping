@@ -285,7 +285,7 @@ for (f in seq_along(ind_files)) {
 
 cat("✓ Haplotype labels updated with region prefixes\n\n")
 #automated parameter selection
-# Helper function: Calculate phenotypic discrimination at HAPLOTYPE level
+# helper function for haplotype discrimination
 calc_pheno_discrimination <- function(ind_data, pheno_col = "Pheno") {
   # This measures: Do haplotypes separate R or N from S?
   # Mean phenotype per haplotype
@@ -364,7 +364,7 @@ region_metrics <- all_ind_data %>%
     #    How well do haplotypes separate R from S?
     pheno_disc_score = ifelse(is.na(pheno_discrimination), 0, pheno_discrimination), 
     # 2. Haplotype diversity score (25%)
-    #    Prefer 7-15 haplotypes (not too simple, not fragmented)
+    #    Prefer 7-15 haplotypes 
     hap_score = case_when(
       n_haplotypes < 3 ~ 0,
       n_haplotypes >= 3 & n_haplotypes <= 6 ~ 0.6,
@@ -373,7 +373,7 @@ region_metrics <- all_ind_data %>%
       n_haplotypes > 20 ~ 0.5
     ), 
     # 3. Coverage score (20%)
-    #    Higher % of samples assigned = better
+
     cov_score = coverage,  
     # 4. Stability score (10%)
     #    Prefer parameters where haplotypes are stable
