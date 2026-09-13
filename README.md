@@ -36,7 +36,7 @@ Comprehensive genomics analysis identifying genome-wide haplotype combinations a
 - **Scripts**: `04_differential_evolution.R`
 
 ### **5. Significant haplotypes**
-- From the DE-selected MGs, idenitfy haplotypes from crosshap outputs
+- From the DE-selected MGs, identify haplotypes from crosshap outputs
 - Conduct Fisher's exact/Freeman-Holtman extension of Fishers exact test to identify significant haplotypes associated with the differential responses of soybean to SMV
 - **Scripts**: `05_significant_haplotypes.R`
 
