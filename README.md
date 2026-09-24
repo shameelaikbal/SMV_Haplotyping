@@ -59,3 +59,6 @@ Comprehensive genomics analysis identifying genome-wide haplotype combinations a
 
 ### **10.Results**
 - Raw variant information, haplotype carriers, and visualisation of significant haplotypes associated with SMV-G1 and SMV-G7 available in `08_results/`
+
+### **Supplemental tables**
+- Supplemental tables for the manuscript
